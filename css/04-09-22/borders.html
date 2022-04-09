@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            padding:16px;
+            width:100%;
+        }
+        .b1{
+            /* border:2px solid black; */
+            border-style: solid;
+            /* border-width:7px; */
+            border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+            /* border-color:blue; */
+            border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+            border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+        }
+        .b2 {
+            border-top:2px solid red;
+        }
+        .b3 {
+            border-bottom:2px solid rgb(212, 255, 0);
+        }
+        .b4{
+            border-left: 10px solid blue;
+            background-color:#26262631;
+        }
+        .b5{
+            border-right: 10px solid red;
+           background-color:#26262631;
+
+        }
+        .b6{
+            border-top: 5px dashed blue;
+            border-bottom: 2px groove blue;
+            background-color:#26262631;
+        }
+        .b7{
+            border-right: 10px solid red;
+            background-color:#26262631;
+            border-top: 5px ridge blue;
+            border-bottom: 2px outset blue;
+            border-left: 2px inset blue;
+            border-radius: 10px;
+
+
+        }
+
+    </style>
+    <title>CSS Border</title>
+</head>
+<body>
+    <p class="b1 box">all side border</p>
+    <p class="b2 box">top side border</p>
+    <p class="b3 box">bottom side border</p>
+    <p class="b4 box">left side border</p>
+    <p class="b5 box">right side border</p>
+    <p class="b6 box">border type side border</p>
+    <p class="b7 box">types side border</p>
+</body>
+</html>

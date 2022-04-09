@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background</title>
+    <style>
+       body { 
+            background:url('./bg.jpg');
+            /* background-attachment: fixed; */
+            background-attachment:scroll;
+        }
+        p {
+            background:lightblue;
+            opacity: 0.2;
+        }
+        .box{
+           width:100%;
+           height: 80vh;
+           
+       }
+       div.bg1 {
+           
+           background-image: url("pic3.jpg");
+           background-repeat: no-repeat;
+       }
+       div.bg2 {
+           background-image: url("pic2.jpg");
+           background-repeat:repeat-x;
+           background-position:right top;
+        }
+        div.bg3 {
+            background-image: url("pic3.jpg");
+            background-repeat:repeat-y;
+       }
+        </style>
+    </style>
+</head>
+<body>
+    <p></p>
+    <div class="bg1 box"></div>
+    <div class="bg2 box"></div>
+    <div class="bg3 box"></div>
+</body>
+</html>

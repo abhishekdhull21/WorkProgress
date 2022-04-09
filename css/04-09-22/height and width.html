@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height and Width</title>
+    <style>
+        .b{
+            width:250px;
+            height:250px;
+        }
+        .b1{
+            width:80%;
+            height:80%;
+        }
+        .b2{
+            width:40vw;
+            height:40vh;
+        }
+        .b3{
+            max-width:40vw;
+            max-height:40vh;
+            min-width:10vw;
+            min-height:10vh;
+        }
+        .border{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="b border">
+        <p>Box one with height/width 100px </p>
+    </div>
+    <div class="b1 border">
+        <p>Box one with height/width 80% </p>
+
+    </div>
+    <div class="b2 border">
+        <p>Box one with height/width 40vh vw </p>
+
+    </div>
+    <div class="b3 border">
+        min and max width height
+    </div>
+</body>
+</html>
