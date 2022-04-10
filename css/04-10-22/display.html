@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display</title>
+    <style>
+        li {
+            list-style-type: none;
+            display: inline-block;
+            color:#fff;
+            background-color: rgba(24, 248, 12, 0.688);
+            padding: 8px;
+            border-radius: 3px;
+        }
+       li:hover {
+           background-color:rgb(10, 80, 231);
+           padding:10px;
+           cursor:pointer;
+           
+       }
+       div.box {
+           background-color:greenyellow;
+           width:800px;
+           height:200px;
+           border: 2px dotted red;
+           display:block;
+           margin:10px;
+       }
+       div.max {
+           max-width:800px;
+           
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>link ab</li>
+        <li>link ab</li>
+        <li>link ab</li>
+        <li>link ab</li>
+        <li>link ab</li>
+    </ul>
+
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda expedita vel, enim sunt natus sed?</div>
+    <div class="box max">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda expedita vel, enim sunt natus sed?</div>
+</body>
+</html>

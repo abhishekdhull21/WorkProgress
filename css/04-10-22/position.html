@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        body {
+            height: 1500px;
+        }
+        .box {
+            max-width: 200px;
+            border-radius: 10px;
+            background-color:#8e908e31;
+            height:200px;
+            padding:16px;
+        }
+        div.static {
+            position:static;
+            border: 2px solid dodgerblue;
+            top:50px;
+        }
+        .relative {
+            position: relative;
+            border:4px solid rgb(184, 211, 10);
+            top:120px;
+            overflow:hidden;
+        }
+        div.normal {
+            left:50px;
+        }
+        div.fixed {
+            position: fixed;
+            border: 2px solid rgb(196, 22, 181);
+            top:50px;
+        }
+        div.absolute {
+            position: absolute;
+            border: 2px solid rgb(1,1,1);
+            top: 100px;
+        }
+        div.sticky {
+            position: -webkit-sticky; /* Safari */
+            position:sticky;
+            top:0;
+            border: 2px solid rgb(171, 228, 13);
+            background-color: green;
+        }
+        div.parent {
+            position: relative;
+        }
+        .round{
+            border-radius: 50%;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="parent">
+         <div class="box static">static</div>
+    <div class="box relative">relative
+        <div class="box relative round">relative inside a relative</div>
+    </div>
+    <div class="box normal">Normal Div</div>
+    <div class="box fixed">Fixed Div</div> 
+    <div class="box absolute">Absoltue</div>
+    <div class="box">Normal Div 2</div>
+</div>
+<div class="box sticky">Sticky Div </div>
+   
+</body>
+</html>
