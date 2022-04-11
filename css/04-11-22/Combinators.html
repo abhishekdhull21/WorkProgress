@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+
+    <style>
+        div p {
+            background-color:red;
+        }
+         ul li {
+            background-color:rgba(82, 82, 166, 0.601);
+            list-style-position: inside;
+            padding: 8px;
+            color:white;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            width:25%;
+
+        }
+        li:hover {
+            cursor:pointer;
+            background-color:rgba(77, 230, 46, 0.784);
+            padding: 16px;
+            font-size: 22px;
+            width:30%;
+        }
+        div > p {
+            background-color:yellow;
+        }
+
+        div + p {
+            background-color:green;
+        }
+        p +  span > p {
+            background-color:rgb(128, 0, 100);
+            color:white;
+            padding:9px;
+            border-radius: 8px;
+            box-shadow:4px 4px 8px rgba(7, 5, 5, 0.55);
+        }
+        div ~ p{
+            background-color:rgb(16, 164, 232);
+            color:white;
+            padding:9px;
+            border-radius: 8px;
+            box-shadow:4px 4px 8px rgba(7, 5, 5, 0.55);
+        } 
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <ul>
+                <li> descendant selector (space)</li>
+            <li>child selector (>)</li>
+            <li>adjacent sibling selector (+)</li>
+            <li>general sibling selector (~)</li>
+            </ul>
+        </p>
+
+    </div>
+    <div>
+        <p>div p {} only select the p situated inside the div</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ut labore, consequatur voluptatibus veritatis iusto quo hic quos totam voluptatem enim dolor nemo, dolore illum impedit unde fugiat fugit aspernatur nulla animi eum fuga. Nostrum, veniam voluptate!</p>
+
+    <p>
+        this is 2nd next to the div
+    </p>
+    <div>
+        <span><p>lorem span > p</p></span>
+        <p>div > p this select all the p thats childern of div tag</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste soluta, et ipsum corporis fugit eligendi, officia voluptatum ducimus id nemo perferendis expedita aspernatur voluptate totam optio at distinctio architecto rerum?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vel sit, alias ducimus atque deserunt ratione, repellat inventore quasi saepe a reiciendis? Autem, nemo rerum mollitia provident similique facere dolore.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio illum aspernatur consequatur ratione! Dolor laboriosam <span>temporibus eligendi</span> cum nemo et quae recusandae nesciunt, aut nostrum commodi aliquid? Quam, omnis quibusdam?</p>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, unde, inventore ut minus suscipit a repellat dolores sed ad ratione aliquam eius atque iure! Fugiat dolorum ab nostrum aspernatur reprehenderit?</p>
+    <span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut, molestiae iste inventore maxime doloremque eligendi mollitia voluptatem aspernatur. Eligendi, voluptates aliquid pariatur reprehenderit ipsum repellat quas doloribus ducimus dignissimos?</p>
+    </span>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem error ut qui, veniam placeat soluta laboriosam. Adipisci recusandae, labore iusto tenetur ratione ipsa cum nulla, deleniti voluptatem, animi aperiam doloremque.</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio illo laudantium aliquam cupiditate non. Quisquam suscipit porro, explicabo, culpa doloremque aperiam cum deleniti quidem, voluptates provident sed illo velit unde!</p>
+</body>
+</html>

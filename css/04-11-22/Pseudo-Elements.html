@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elements</title>
+    <style>
+        p::first-letter{
+            color:black;
+            font-weight:bold;
+            text-transform: uppercase;
+
+        }
+        p::first-line{
+            font-variant: small-caps;
+        }
+        h1::before {
+            content: "Abhishek ";
+        }
+        h1::after {
+            content: " Ramrai"
+        }
+        /* marker select the list style */
+        ::marker{
+            color:blue;
+        }
+        /* selection change the css which selected by the user on the current page */
+        ::selection{
+            background-color:yellow;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        lorem ipsum dolor sit amet consectetur adipisicing elit. b
+         Porro, assumenda debitis vero vitae omnis sed delectus maiores natus. Ab quam sapiente voluptatem repellat maxime unde nisi architecto iusto ipsum vel.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque saepe alias sapiente impedit aliquid reprehenderit eligendi, unde blanditiis doloremque nesciunt ducimus quia accusamus deserunt eum, minus sed quos. Autem, consectetur?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore amet delectus fugit id autem minima vel a asperiores eius, consequatur exercitationem aperiam neque veniam pariatur. Temporibus minima minus autem eum.
+    </p>
+    <h1>Dhull</h1>
+    <ul>
+        <li> descendant selector (space)</li>
+    <li>child selector (>)</li>
+    <li>adjacent sibling selector (+)</li>
+    <li>general sibling selector (~)</li>
+    </ul>
+</body>
+</html>

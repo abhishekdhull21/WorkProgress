@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        /* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
+a.link:hover {
+    background-color: rgb(188, 36, 36);
+    padding:8px;
+    color: white;
+    border-radius:4px;
+    margin-top:10px;
+}
+div.hover > p{
+    display:none;
+}
+div:hover p {
+    display:block;
+}
+/* p span:first-child{
+
+} */
+/* div :first-child{
+
+} */
+p:first-child span {
+    color:red;
+}
+
+q:lang(no){
+    quotes: "122" "123";
+    /* :yellow; */
+}
+    </style>
+</head>
+<body>
+    <a href="#"> link text</a>
+    <a href="#"> link text</a>
+    <a href="#"> link text</a>
+    <a href="#" class="link"> link text</a>
+    <a href="#"> link text</a>
+    <a href="#"> link text</a>
+    <div class="">hover text here
+        <p>this is hidden block that show on hover on div</p>
+    </div>
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum est, molestias nihil explicabo consequuntur <span>adipisicing</span> eos doloremque, ex excepturi optio, vel nostrum? Quis accusamus ea corrupti perferendis explicabo laudantium aperiam asperiores! lorem ipsum dolor sit amet, consectet</p>    <p>Lorem ipsum, dolor sit amet consectetur  <span>adipisicing</span>elit. Ipsum est, molestias nihil explicabo consequuntur eos doloremque, ex excepturi optio, vel nostrum? Quis accusamus ea corrupti perferendis explicabo laudantium aperiam asperiores! lorem ipsum dolor sit amet, consectet</p>    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum est, molestias nihil explicabo consequ<span>adipisicing</span>untur eos doloremque, ex excepturi optio, vel nostrum? Quis accusamus ea corrupti perferendis explicabo laudantium aperiam asperiores! lorem ipsum <span>adipisicing</span> dolor sit amet, consectet</p>    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum est, molestias nihil explicabo consequuntur eos doloremque, ex excepturi optio, vel nostrum? Quis accusamus ea corrupti perferendis explicabo laudantium aperiam asperiores! lorem ipsum dolor sit amet, consectet</p>    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum est, molestias nihil explicabo consequuntur eos doloremque, ex excepturi optio, vel nostrum? Quis accusamus ea corrupti perferendis explicabo laudantium aperiam asperiores! lorem <span>adipisicing</span> ipsum dolor sit amet, consectet</p>
+        <p></p>
+        <p></p>
+         <p>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus tempore, voluptates, tenetur expedita facilis excepturi <q lang="no" >voluptatem</q>  saepe quasi adipisci, debitis eaque minus aliquid! Voluptate quam, alias ex soluta maxime aut.  </p>
+    </div>
+   
+</body>
+</html>

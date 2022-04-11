@@ -1,0 +1,5 @@
+Combinators
+Pseudo-classes - link :first-child :lang
+Pseudo-Elements -  ::first-line ::first-letter ::before ::after
+opacity 
+navigation - horizontal vertical
