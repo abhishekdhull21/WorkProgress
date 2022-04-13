@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            counter-reset: section;
+        }
+        h2 {
+            counter-reset:sh;
+        }
+        h2::before {
+            counter-increment: section;
+            content:"Section " counter(section) ": ";
+        }
+        h3::before {
+            counter-increment:sh;
+            content:"Section " counter(sh) ": ";
+        }
+    </style>
+</head>
+<body>
+    <h2>Helo world how are you</h2>
+
+    <h2>Helo world how are you</h2>
+    <h3>this is subheading</h3>
+    <h3>this is subheading</h3>
+    <h3>this is subheading</h3>
+    <h2>Helo world how are you</h2>
+    <h2>Helo world how are you</h2>
+    <h2>Helo world how are you</h2>
+    <h3>this is subheading</h3>
+    <h2>Helo world how are you</h2>
+    <h2>Helo world how are you</h2>
+    <h3>this is subheading</h3>
+    <h3>this is subheading</h3>
+    <h3>this is subheading</h3>
+    <h3>this is subheading</h3>
+    <h2>Helo world how are you</h2>
+    <h3>this is subheading</h3>
+    <h3>this is subheading</h3>
+</body>
+</html>

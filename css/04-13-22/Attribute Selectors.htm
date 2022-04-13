@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selectors</title>
+    <style>
+        a[target] {
+            text-decoration: none;
+            font-size:26px;
+            color:#fff;
+            padding:10px;
+            display: inline-block;
+            background-color: rgb(70, 205, 33);
+        }
+        a[target = "_self"] {
+            text-decoration: none;
+            font-size:26px;
+            color:#fff;
+            padding:10px;
+            display: inline-block;
+            background-color: rgb(205, 33, 33);
+        }
+        a[target = "_parent"] {
+            text-decoration: none;
+            font-size:26px;
+            color:#fff;
+            padding:10px;
+            display: inline-block;
+            background-color: rgb(239, 232, 38);
+        }
+        [title ~= "keyword"] {
+            background-color:yellow;
+            color:red;
+        }
+        [class |= "top"] {
+            border-color:2px solid black;
+            background-color:green;
+            color:#fff;
+        }
+        [class ^= "top"] {
+            background-color:rgba(63, 63, 152, 0.29);
+        }
+        [class $= "c1"] {
+            background-color:rgba(255, 255, 0, 0.322);
+        }
+        [class *= "p1"] {
+            background-color:rgba(1,56,98,0.4);
+        }
+        input[type="text"] {
+            border: 1px solid rgb(19, 157, 191);
+        }
+        input[type="password"] {
+            border: 1px solid rgba(164, 22, 157, 0.3);
+        }
+    </style>
+</head>
+<body>
+    Attribute Selectors use to select the html element on basis of the attribute
+    <a href="#">link 5</a>
+    <a href="#" target="">link 5</a>
+    <a href="#">link 5</a>
+    <a href="#" target="_blank">link 5</a>
+    <a href="#" target="_blank">link 5</a>
+    <a href="#" target="_parent">link 5</a>
+    <a href="#" target="_self">link 5</a>
+
+    <p class="top-content">
+        this is keyword on the basis this element select by css and we apply some css to highlight
+    </p>
+    <p title="this is keyword on the basis">
+        this is keyword on the basis this element select by css and we apply some css to highlight
+    </p>
+
+    <p class="topcontent">
+        this is keyword on the basis this element select by css and we apply some css to highlight
+
+    </p>
+
+    <p class="top_c1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias tenetur veritatis commodi consectetur, reprehenderit impedit ipsa atque distinctio similique? Repellat aut officiis enim nostrum doloremque possimus quia modi dolorum impedit laudantium, error corporis. Eaque quas aspernatur esse nobis explicabo, eligendi debitis blanditiis modi a amet veniam incidunt exercitationem, doloremque cum. Commodi earum magni eius asperiores laudantium, cum dolor quas ab nulla quia in facere dicta, blanditiis inventore obcaecati quisquam similique eum laboriosam minima architecto ea? Omnis, quae. Tempora, velit nam?</p>
+    <p class="top1_c1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias tenetur veritatis commodi consectetur, reprehenderit impedit ipsa atque distinctio similique? Repellat aut officiis enim nostrum doloremque possimus quia modi dolorum impedit laudantium, error corporis. Eaque quas aspernatur esse nobis explicabo, eligendi debitis blanditiis modi a amet veniam incidunt exercitationem, doloremque cum. Commodi earum magni eius asperiores laudantium, cum dolor quas ab nulla quia in facere dicta, blanditiis inventore obcaecati quisquam similique eum laboriosam minima architecto ea? Omnis, quae. Tempora, velit nam?</p>
+
+    <input type="text" />
+    <input type="password" />
+</body>
+</html>

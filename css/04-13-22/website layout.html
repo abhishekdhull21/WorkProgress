@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <style>
+        .header {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding:20px;
+        }
+        .main {
+            position: relative;
+            /* float:left; */
+            display: block;
+       }
+        .nav li {
+            cursor:pointer;
+            list-style-type:none;
+            display: inline-block;
+            color:white;
+            padding: 16px 20px;
+            
+        }
+        .nav li:hover {
+            background-color:#b26b26b2;
+        }
+        .nav {
+            position:relative;
+            background-color: #000;
+            color:red;
+            /* overflow:hidden; */
+
+        }
+        div.dropdown {
+            position:relative;
+        }
+
+        .dropdown-content {
+            position:absolute;
+            color:black;
+            /* padding:16px; */
+            min-width :120px;
+            display:none;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown-content ul {
+            margin-top:16px;
+            padding:0px;
+        }
+        .dropdown-content {
+            color:black;
+            /* margin-top:10px; */
+        }
+        
+        .dropdown-content li {
+            /* width:100%; */
+            color:black;
+            margin:0;
+            padding: 16px 20px;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .col {
+            width:33.33%;
+            float:left;
+        }
+        .row:after {
+            display:table;
+            clear:both;
+        }
+                .footer {
+                    /* position:sticky; */
+        background-color: #F1F1F1;
+        text-align: center;
+        margin-top: 16px;;
+        padding: 10px;
+        }
+        @media  screen and (max-width:600px) {
+            .col {
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>
+                <div class="dropdown">
+                    <span>More</span>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>sub item 1</li>
+                            <li>sub item 2</li>
+                            <li>sub item 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>Contact Us</li>
+        </ul>
+   
+    </div>
+    <div class="main">
+        <div class="row">
+            <div class="col">
+                <h2>heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed incidunt nisi enim assumenda mollitia recusandae quae rerum, facilis sit dolores voluptatem optio, voluptas eaque dolore vel reprehenderit? A iste culpa quia delectus non, excepturi cupiditate saepe eligendi blanditiis impedit, vitae, consequatur voluptatibus quaerat eos pariatur obcaecati neque eius voluptatum cum magni est minima totam enim at? In, provident molestias? Ducimus fugit quam ea accusantium aspernatur veritatis eligendi dicta! Repellendus magnam deleniti quaerat et est. Cum, magnam eum doloribus explicabo eveniet suscipit perferendis exercitationem placeat excepturi, asperiores porro culpa. Laborum laboriosam quia pariatur velit ducimus, similique amet quos! Error vero reiciendis et neque consequuntur accusantium ipsum? Harum placeat illo iusto asperiores hic. Quidem voluptatum excepturi dolorum magni nobis quam repellendus? Excepturi delectus facere sit sapiente possimus reiciendis iste deserunt eveniet voluptatem nam inventore unde minima, voluptatum nisi aliquam voluptates dolores natus nulla, repudiandae voluptatibus quidem! Rem sed veniam exercitationem perferendis eligendi modi pariatur blanditiis, culpa voluptatibus veritatis. Harum, optio.</p>
+            </div>
+            <div class="col">
+                <h2>heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed incidunt nisi enim assumenda mollitia recusandae quae rerum, facilis sit dolores voluptatem optio, voluptas eaque dolore vel reprehenderit? A iste culpa quia delectus non, excepturi cupiditate saepe eligendi blanditiis impedit, vitae, consequatur voluptatibus quaerat eos pariatur obcaecati neque eius voluptatum cum magni est minima totam enim at? In, provident molestias? Ducimus fugit quam ea accusantium aspernatur veritatis eligendi dicta! Repellendus magnam deleniti quaerat et est. Cum, magnam eum doloribus explicabo eveniet suscipit perferendis exercitationem placeat excepturi, asperiores porro culpa. Laborum laboriosam quia pariatur velit ducimus, similique amet quos! Error vero reiciendis et neque consequuntur accusantium ipsum? Harum placeat illo iusto asperiores hic. Quidem voluptatum excepturi dolorum magni nobis quam repellendus? Excepturi delectus facere sit sapiente possimus reiciendis iste deserunt eveniet voluptatem nam inventore unde minima, voluptatum nisi aliquam voluptates dolores natus nulla, repudiandae voluptatibus quidem! Rem sed veniam exercitationem perferendis eligendi modi pariatur blanditiis, culpa voluptatibus veritatis. Harum, optio.</p>
+            </div>
+            <div class="col">
+                <h2>heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed incidunt nisi enim assumenda mollitia recusandae quae rerum, facilis sit dolores voluptatem optio, voluptas eaque dolore vel reprehenderit? A iste culpa quia delectus non, excepturi cupiditate saepe eligendi blanditiis impedit, vitae, consequatur voluptatibus quaerat eos pariatur obcaecati neque eius voluptatum cum magni est minima totam enim at? In, provident molestias? Ducimus fugit quam ea accusantium aspernatur veritatis eligendi dicta! Repellendus magnam deleniti quaerat et est. Cum, magnam eum doloribus explicabo eveniet suscipit perferendis exercitationem placeat excepturi, asperiores porro culpa. Laborum laboriosam quia pariatur velit ducimus, similique amet quos! Error vero reiciendis et neque consequuntur accusantium ipsum? Harum placeat illo iusto asperiores hic. Quidem voluptatum excepturi dolorum magni nobis quam repellendus? Excepturi delectus facere sit sapiente possimus reiciendis iste deserunt eveniet voluptatem nam inventore unde minima, voluptatum nisi aliquam voluptates dolores natus nulla, repudiandae voluptatibus quidem! Rem sed veniam exercitationem perferendis eligendi modi pariatur blanditiis, culpa voluptatibus veritatis. Harum, optio.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> <h1>footer</h1></div>
+</body>
+</html>
