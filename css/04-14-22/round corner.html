@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Corner</title>
+    <style>
+        .box {
+            width: max(30vw,200px);
+            height:min(30vw,200px);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding:20px;
+            background-color:#f6f6f6;
+            margin-bottom: 40px;
+            border: 2px solid black;
+        }
+        .corner {
+            border-radius:10px;
+        }
+        .corner-top-left {
+            border-radius:20px 0px 0px 0px;
+        }
+        .corner-top-right {
+            border: 2px solid black;
+            /* border-radius:20px 0px 0px 0px; */
+            border-radius:0px 20px 0px 0px;
+        }
+        .corner-bottom-right {
+            border: 2px solid black;
+            /* border-radius:20px 0px 0px 0px;
+            border-radius:0px 20px 0px 0px; */
+            border-radius:0px 0px 20px 0px;
+        }
+        .corner-bottom-left {
+            border: 2px solid black;
+            /* border-radius:20px 0px 0px 0px;
+            border-radius:0px 20px 0px 0px;
+            border-radius:0px 0px 20px 0px; */
+            border-radius:0px 0px 0px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box corner">
+        <p>Box with corners</p>
+    </div>
+    <div class="box corner-top-left">
+        <p>border-radius also support clockwise rotation to select the border</p>
+    </div>
+
+    <div class="box corner-top-right"></div>
+    <div class="box corner-bottom-right"></div>
+    <div class="box corner-bottom-left"></div>
+</body>
+</html>

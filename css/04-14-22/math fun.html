@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Math functions</title>
+    <style>
+        .div {
+            position:absolute;
+            margin-top: calc(50% - 100px);
+        }
+        .max {
+            background-color:yellow;
+            width:max(48%,200px);
+        }
+        .min {
+            background-color:rgb(41, 212, 235);
+            width:min(60%,200px);
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="div" />
+
+    <div class="max">Max funtion select max value from the list</div>
+    <div class="min">min funtion select max value from the list</div>
+</body>
+</html>
