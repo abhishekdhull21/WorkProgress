@@ -1,18 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto&effect=neon|outline|emboss|shadow-multiple"
+    />
+
     <title>Form</title>
-</head>
-<body>
-    <form action="http://localhost:3000/users" method="post">
-        <input type="text" name="name" id="">
-        <input type="text" name="mobile" id="">
-        <input type="text" name="email" id="">
-        <input type="text" name="address" id="">
-        <input type="Submit" name="" id="">
-    </form>
-</body>
+    <style>
+      input {
+        margin-bottom: 12px;
+        width: 80%;
+      }
+
+      div.popup {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+      }
+      .popup-form {
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(15, 11, 243, 0.283);
+        top: calc(60vh / 2);
+        left: calc(80vw / 2);
+        padding: 8px;
+        border-radius: 12px;
+      }
+      .popup-form .popup-body {
+        padding: 32px;
+      }
+      .popup-form .popup-head {
+        float: right;
+      }
+      .popup-close {
+        color: red;
+        cursor: pointer;
+        padding-right: 8px;
+      }
+      .popup-form input {
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid rgb(0, 0, 0);
+      }
+
+      .popup-form input[type="submit"] {
+        padding: 16px 12px;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 16px;
+        background-color: rgb(78, 232, 64, 0.9);
+      }
+
+      .main {
+        padding: 16px;
+        border-radius: 10px;
+        margin-right: calc(40vw / 2);
+        margin-left: calc(40vw / 2);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        margin-bottom: 32px;
+      }
+
+      .main .form {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      .main-head {
+        font-family: "Roboto", sans-serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 3px #ababab;
+        text-align: center;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 16px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .btn {
+        cursor: pointer;
+        padding: 16px;
+        border: none;
+      }
+      .btn-success {
+        background-color: rgb(58, 247, 74);
+        color: #fff;
+        font-size: 16px;
+        border-radius: 8px;
+      }
+      input {
+        padding: 12px;
+      }
+      .alert {
+        color: rgb(244, 4, 4);
+      }
+      .success {
+        color: rgb(74, 30, 252);
+      }
+
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-head">
+        <h2>Add New User</h2>
+      </div>
+      <div class="form">
+        <form method="post">
+          <input
+            type="text"
+            name="name"
+            placeholder="Username"
+            id="name"
+          /><br />
+          <input
+            type="number"
+            name="mobile"
+            placeholder="Mobile"
+            id="mobile"
+          /><br />
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            id="email"
+          /><br />
+          <input
+            type="text"
+            name="address"
+            placeholder="address"
+            id="address"
+          /><br /><br />
+        </form>
+        <button style="width: 85%" class="btn btn-success center" id="user-btn">
+          Save User
+        </button>
+      </div>
+      <br /><br />
+    </div>
+    <!-- popup form to fetch related user data and update -->
+    <div class="popup">
+      <div class="popup-form">
+        <div class="popup-head">
+          <p class="popup-close">X</p>
+        </div>
+        <div class="popup-body">
+          <input type="hidden" id="pop-user-id" />
+          <input
+            type="text"
+            name="name"
+            placeholder="Username"
+            id="pop-name"
+          /><br />
+          <input
+            type="number"
+            name="mobile"
+            placeholder="Mobile"
+            id="pop-mobile"
+          /><br />
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            id="pop-email"
+          /><br />
+          <input
+            type="text"
+            name="address"
+            placeholder="address"
+            id="pop-address"
+          /><br /><br />
+          <input type="submit" id="btn-update" value="Update" />
+        </div>
+      </div>
+    </div>
+    <!-- end of popup -->
+    <div class="users-table">
+      <table>
+        <thead>
+          <th>Sn.</th>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th colspan="2">Action</th>
+        </thead>
+        <tbody id="users-tbody"></tbody>
+      </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      const userUrl = "http://localhost:3000/users";
+      $(document).ready(() => {
+        loadUsers();
+        $("#user-btn").on("click", (e) => {
+          //   e.preventDefault();
+          let data = {
+            name: $("#name").val(),
+            mobile: $("#mobile").val(),
+            email: $("#email").val(),
+            address: $("#address").val(),
+          };
+          $.ajax({
+            url: userUrl,
+            method: "POST",
+            data: JSON.stringify(data),
+            dataType: "json",
+            contentType: "application/json",
+            success: function (res) {
+              console.log(res);
+              loadUsers();
+            },
+            error: function (err) {
+              console.log(err);
+            },
+          });
+        });
+      });
+
+      $("#btn-update").on("click", (e) => {
+        //   e.preventDefault();
+        let data = {
+          name: $("#pop-name").val(),
+          mobile: $("#pop-mobile").val(),
+          email: $("#pop-email").val(),
+          address: $("#pop-address").val(),
+          id: $("#pop-user-id").val(),
+        };
+        $.ajax({
+          url: userUrl + "/" + data.id,
+          method: "PUT",
+          data: JSON.stringify(data),
+          dataType: "json",
+          contentType: "application/json",
+          success: function (res) {
+            // console.log(res);
+            loadUsers();
+            $(".popup").hide();
+          },
+          error: function (err) {
+            console.log(err);
+          },
+        });
+      });
+
+      function loadUsers() {
+        $.ajax({
+          url: userUrl,
+          method: "GET",
+          dataType: "json",
+          contentType: "application/json",
+          success: function (res) {
+            console.log(res);
+            userLoadTable(res);
+          },
+          error: function (err) {
+            console.log(err);
+          },
+        });
+      }
+      function deleteUser(id) {
+        // alert(id v);
+        $.ajax({
+          url: userUrl + "/" + id,
+          method: "DELETE",
+          dataType: "json",
+          success: function (res) {
+            // console.log(res
+            loadUsers();
+          },
+          error: function (err) {
+            console.log(err);
+          },
+        });
+      }
+      function userLoadTable(data) {
+        row = "";
+        data.map((d, i) => {
+          row += ` <tr>
+            <td>${i + 1}</td>
+            <td>${d.name}</td>
+            <td>${d.mobile}</td>
+            <td>${d.email}</td>
+            <td>${d.address}</td>
+            <td class="btn alert" onclick="deleteUser('${
+              d._id
+            }')" >Delete  </td>
+            <td class="btn success" onclick="showPopup('${d._id}')">Edit</td>
+          </tr>`;
+        });
+        $("#users-tbody").empty();
+        $("#users-tbody").append(row);
+      }
+
+      $(".popup-close").click(function () {
+        $(".popup").hide();
+      });
+
+      function showPopup(id) {
+        $(".popup").show();
+        getUser(id);
+      }
+
+      function getUser(id) {
+        $.ajax({
+          url: userUrl + "/" + id,
+          method: "GET",
+          dataType: "json",
+          contentType: "application/json",
+          success: loadUpdateForm,
+          error: function (err) {
+            alert(err);
+          },
+        });
+      }
+
+      function loadUpdateForm(res) {
+        console.log(res);
+        $("#pop-name").val(res.name);
+        $("#pop-mobile").val(res.mobile);
+        $("#pop-email").val(res.email);
+        $("#pop-address").val(res.address);
+        $("#pop-user-id").val(res._id);
+      }
+    </script>
+  </body>
 </html>

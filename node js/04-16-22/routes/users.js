@@ -12,8 +12,8 @@ const schema = mongoose.Schema({
 const User = mongoose.model("User", schema);
 // const User = mongoose.model("User", schema);
 router.post("/", function (req, res, next) {
-  // console.log(req);
-  const params = req.query;
+  console.log(req.body);
+  const params = req.body;
   const user = new User({
     name: params.name,
     mobile: params.mobile,
@@ -23,33 +23,33 @@ router.post("/", function (req, res, next) {
   user.save();
   res.send(user);
 });
-router.get("/", async function (req, res, next) {
-  const user = await User.find({});
-  // console.log(user);
-  // user.save();
-  res.send(user);
+router.get("/", function (req, res, next) {
+  User.find({}).then(function (user) {
+    res.send(user);
+  });
 });
 router.get("/:id", async (req, res, next) => {
   const user = await User.findOne({ _id: req.params.id });
-  console.log(user);
+  // console.log(user);
   res.send(user);
 });
 
 router.put("/:id", async (req, res, next) => {
   try {
     const body = req.body;
+    console.log(body);
     const user = await User.findOne({ _id: req.params.id });
     if (body.name) {
       user.name = body.name;
     }
     if (body.email) {
-      user.name = body.email;
+      user.email = body.email;
     }
-    if (body.number) {
-      user.name = body.number;
+    if (body.mobile) {
+      user.mobile = body.mobile;
     }
     if (body.address) {
-      user.name = body.address;
+      user.address = body.address;
     }
     await user.save();
     res.send(user);
