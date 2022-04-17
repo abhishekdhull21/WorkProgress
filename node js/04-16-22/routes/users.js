@@ -29,9 +29,14 @@ router.get("/", function (req, res, next) {
   });
 });
 router.get("/:id", async (req, res, next) => {
-  const user = await User.findOne({ _id: req.params.id });
-  // console.log(user);
-  res.send(user);
+  try {
+    const user = await User.findOne({ _id: req.params.id });
+    // console.log(user);
+    res.send(user);
+  } catch {
+    res.status(404);
+    res.send({ error: "User not exists" });
+  }
 });
 
 router.put("/:id", async (req, res, next) => {
