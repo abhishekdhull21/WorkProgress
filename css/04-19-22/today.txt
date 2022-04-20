@@ -1,0 +1,13 @@
+CSS Text Effects - text-overflow, word-wrap, word-break, writing-mode
+CSS @font-face 
+CSS 2D Transforms - transform, translate, rotate, scale, skew, matrix
+CSS 3D Transforms - rotateX(), rotateY(), rotateZ()
+CSS Transitions - transition
+transition-delay, transition-duration, transition-property, transition-timing-function
+CSS Animations - @keyframes, animation-name, animation-duration, animation-delay, animation-iteration-count, animation-direction,animation-timing-function
+CSS Tooltip 
+CSS Styling Images - Rounded Images, Responsive Images, opacity, filter, 
+CSS Image Reflection - Offset,Gradient
+CSS object-fit - object-posititon
+CSS Masking
+Basic Button Styling

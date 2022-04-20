@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 {
+        width: 100px;
+        height: 100px;
+        background: rgb(0, 21, 255);
+        transition: width 03s;
+      }
+
+      .div1:hover {
+        width: 1000px;
+      }
+      .container {
+        width: 100px;
+        height: 100px;
+        background: rgb(34, 255, 0);
+        transition: width 10s, height 0.5s;
+      }
+      .container:hover {
+        height: 500px;
+        width: 500px;
+      }
+      .div2 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s;
+        transition-timing-function: ease-out;
+        transition-delay: 1s;
+      }
+      .div2:hover {
+        width: 500px;
+      }
+      .div3 {
+        width: 100px;
+        height: 100px;
+        background: rgb(159, 18, 18);
+        transition: width 2s;
+        transition-timing-function: cubic-bezier(0, 0.59, 0.9, 1);
+      }
+      .div3:hover {
+        width: 500px;
+      }
+      .div4 {
+        width: 100px;
+        height: 100px;
+        background: rgb(223, 255, 15);
+        transition: width 2s, height 2s, transform 2s;
+      }
+      .div4:hover {
+        width: 500px;
+        height: 50px;
+        transform: rotate(150deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1"></div>
+    <div class="container"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+  </body>
+</html>

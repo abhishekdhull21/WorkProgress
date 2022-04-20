@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .container {
+        width: 300px;
+        height: 100px;
+        background-color: rgb(0, 255, 140);
+        border: 1px solid black;
+        transform: translate(50px, 100px);
+      }
+      div {
+        width: 300px;
+        height: 100px;
+        background-color: rgb(0, 255, 30);
+        border: 1px solid black;
+      }
+
+      div#myDiv {
+        transform: rotate(60deg);
+      }
+      div.scale {
+        margin: 150px;
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+        transform: scale(2, 3);
+      }
+      .skew {
+        transform: scale(100px, 100px);
+      }
+      div#matrix1 {
+        transform: matrix(1, -0.3, 0, 1, 0, 0);
+      }
+
+      div#matrix2 {
+        transform: matrix(1, 0, 0.5, 1, 150, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <h1>The rotate() Method</h1>
+
+    <p>
+      The rotate() method rotates an element clockwise or counter-clockwise.
+    </p>
+
+    <div>This a normal div element.</div>
+
+    <div id="myDiv">This div element is rotated clockwise 20 degrees.</div>
+    <div class="scale">
+      This div element is two times of its original width, and three times of
+      its original height.
+    </div>
+
+    <div>This a normal div element.</div>
+
+    <div class="skew">
+      This div element is skewed 20 degrees along the X-axis, and 10 degrees
+      along the Y-axis.
+    </div>
+    <div id="matrix1">Using the matrix() method.</div>
+
+    <div id="matrix2">Another use of the matrix() method.</div>
+  </body>
+</html>

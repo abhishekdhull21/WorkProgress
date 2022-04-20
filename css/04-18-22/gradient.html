@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+        margin-bottom: 16px;
+      }
+      .g1 {
+        background: linear-gradient(red, blue);
+      }
+      .gl2r {
+        background: linear-gradient(to right, red, blue);
+      }
+      .g2br {
+        background: linear-gradient(to bottom right, green, blue);
+      }
+      .gd180 {
+        background: linear-gradient(180deg, green, blue);
+      }
+      .gd90 {
+        background: linear-gradient(90deg, green, blue);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box g1"></div>
+    <div class="box gl2r"></div>
+    <div class="box g2br"></div>
+    <div class="box gd180"></div>
+    <div class="box gd90"></div>
+  </body>
+</html>
