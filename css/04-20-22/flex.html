@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        background-color: DodgerBlue;
+      }
+
+      .flex-container > div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+      }
+      .flex-container1 {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: DodgerBlue;
+      }
+
+      .flex-container1 > div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+      }
+      .flex-container2 {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        background-color: DodgerBlue;
+      }
+
+      .flex-container2 > div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Create a Flex Container</h1>
+
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <p>
+      A Flexible Layout must have a parent element with the
+      <em>display</em> property set to <em>flex</em>.
+    </p>
+
+    <p>
+      Direct child elements(s) of the flexible container automatically becomes
+      flexible items.
+    </p>
+
+    <h1>The flex-wrap Property</h1>
+
+    <p>
+      The "flex-wrap: wrap;" specifies that the flex items will wrap if
+      necessary:
+    </p>
+
+    <div class="flex-container1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <p>
+      The "flex-wrap: wrap-reverse;" specifies that the flex items will wrap if
+      necessary:
+    </p>
+
+    <div class="flex-container2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+  </body>
+</html>
