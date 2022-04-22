@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript String Properties</h2>
+
+    <p>The length property returns the length of a string:</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4">
+      Replace "Microsoft" with "W3Schools" in the paragraph below:
+    </p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <script>
+      {
+        let text = "a,b,c,d,e,f";
+        const myArray = text.split(",");
+        document.getElementById("demo7").innerHTML = myArray[0];
+      }
+    </script>
+
+    <script>
+      let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      document.getElementById("demo").innerHTML = text.length;
+    </script>
+    <script>
+      {
+        let str = "Apple, Banana, Kiwi";
+        document.getElementById("demo1").innerHTML = str.slice(7, 13);
+      }
+    </script>
+    <script>
+      {
+        let str = "Apple, Banana, Kiwi";
+        document.getElementById("demo2").innerHTML = str.substr(7, 6);
+      }
+      {
+        let text = document.getElementById("demo3").innerHTML;
+        document.getElementById("demo3").innerHTML = text.replace(
+          "Microsoft",
+          "W3Schools"
+        );
+      }
+
+      {
+        let text = document.getElementById("demo2").innerHTML;
+        document.getElementById("demo4").innerHTML = text.toUpperCase();
+      }
+    </script>
+
+    <script>
+      {
+        let text1 = "     Hello World!     ";
+        let text2 = text1.trim();
+
+        document.getElementById("demo5").innerHTML =
+          "Length text1=" + text1.length + "<br>Length2 text2=" + text2.length;
+      }
+      {
+        let text = "5";
+        document.getElementById("demo6").innerHTML = text.padStart(5, "xi");
+      }
+    </script>
+  </body>
+</html>

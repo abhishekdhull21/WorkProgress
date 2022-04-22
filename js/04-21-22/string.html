@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = "Hello \
+Dolly!";
+    </script>
+
+    <script>
+      let text = "The character \\ is called backslash.";
+      document.getElementById("demo1").innerHTML = text;
+    </script>
+    <script>
+      let x = "John";
+      let y = new String("John");
+      console.log(x === y);
+      console.log(x == y);
+    </script>
+  </body>
+</html>
