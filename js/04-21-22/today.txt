@@ -1,0 +1,15 @@
+Js Intro 
+    Output
+    Statements
+    Syntax
+    Comments
+    Variables - Let, Const
+    Operators - Arithmetic, Assignment, Data Types
+    Functions 
+    Objects 
+    Events
+Strings - length, slice, substring, substr, replace, concat, trim, charAt, split
+String Search - indexOf, lastIndexOf, search, includes, startsWith
+Template Literals
+JS Numbers
+Array - create, accessing, changing, 

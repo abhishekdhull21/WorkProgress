@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Arrays</h2>
+
+    <p>The typeof operator, when used on an array, returns object:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo").innerHTML = typeof fruits;
+      document.getElementById("demo").innerHTML +=
+        "<br>" + Array.isArray(fruits);
+      document.getElementById("demo").innerHTML +=
+        "<br> convert to string" + fruits.toString();
+      document.getElementById("demo").innerHTML +=
+        "<br>joint with - " + fruits.join(" - ");
+      fruits.pop();
+      fruits.push("kiwi");
+      document.getElementById("demo").innerHTML += "<br>" + fruits;
+      document.getElementById("demo").innerHTML +=
+        "<br>shifted out item - " + fruits.shift();
+      document.getElementById("demo").innerHTML += "<br> " + fruits;
+      fruits.unshift("Lemon");
+      document.getElementById("demo").innerHTML +=
+        "<br> after unshift: " + fruits;
+
+      const arr1 = ["Cecilie", "Lone"];
+      const arr2 = ["Emil", "Tobias", "Linus"];
+      const arr3 = ["Robin", "Morgan"];
+      const myChildren = arr1.concat(arr2, arr3);
+      console.log(myChildren);
+    </script>
+  </body>
+</html>

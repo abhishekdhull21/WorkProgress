@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Objects</h2>
+    <p>Creating a JavaScript Object:</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+      const person = {
+        firstName: "John A",
+        lastName: "Doe",
+        age: 60,
+        eyeColor: "blue",
+      };
+
+      document.getElementById("demo").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+
+      const person1 = {};
+      person1.firstName = "John B";
+      person1.lastName = "Doe";
+      person1.age = 50;
+      person1.eyeColor = "blue";
+
+      document.getElementById("demo1").innerHTML =
+        person1.firstName + " is " + person1.age + " years old.";
+
+      const person2 = new Object();
+      person2.firstName = "John C";
+      person2.lastName = "Doe";
+      person2.age = 70;
+      person2.eyeColor = "blue";
+
+      document.getElementById("demo2").innerHTML =
+        person2.firstName + " is " + person2.age + " years old.";
+    </script>
+  </body>
+</html>

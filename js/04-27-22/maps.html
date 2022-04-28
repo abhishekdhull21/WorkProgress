@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Map Objects</h2>
+    <p>Creating a Map from an Array:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200],
+      ]);
+      fruits.set("pineapple", 350);
+      fruits.set("greaps", 50);
+      fruits.delete("apples");
+      document.getElementById("demo").innerHTML =
+        "pineapple " + fruits.get("pineapple");
+      fruits.clear();
+
+      console.log(fruits);
+    </script>
+  </body>
+</html>
