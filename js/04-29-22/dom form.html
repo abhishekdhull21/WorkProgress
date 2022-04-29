@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function validateForm() {
+        let name = document.forms["myForm"]["fname"].value;
+        if (name == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+        let mobile = document.forms["myForm"]["mobile"].value;
+        if (mobile == "") {
+          alert("Mobile must be filled out");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript Validation</h2>
+
+    <form
+      name="myForm"
+      action=""
+      onsubmit="return validateForm()"
+      method="post"
+    >
+      Name: <input type="text" name="fname" /> Mobile:
+      <input type="text" name="mobile" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
