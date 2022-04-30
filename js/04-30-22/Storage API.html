@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage API</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <input type="text" id="inpName" required placeholder="Enter Name" />
+    <button onclick="save()">Save</button>
+    <button onclick="get()">Get</button>
+    <script>
+      const myElement = document.getElementById("demo");
+      const inpName = document.getElementById("inpName");
+
+      function save() {
+        if (inpName.checkValidity()) {
+          localStorage.setItem("name", inpName.value);
+          localStorage.getItem("name");
+          inpName.value = "";
+        } else {
+          alert("Please enter a name");
+        }
+      }
+      function get() {
+        let name = localStorage.getItem("name");
+        if (name == null) {
+          inpName.value = "No name saved";
+        } else {
+          inpName.value = name;
+        }
+      }
+    </script>
+  </body>
+</html>

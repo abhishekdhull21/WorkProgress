@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Location</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <input type="button" value="Load new document" onclick="newDoc()" />
+    <script>
+      document.getElementById("demo1").innerHTML =
+        "Page location is " + window.location.href;
+
+      document.getElementById("demo2").innerHTML =
+        "Page hostname is " + window.location.hostname;
+
+      document.getElementById("demo3").innerHTML =
+        "Page path is " + window.location.pathname;
+
+      document.getElementById("demo4").innerHTML =
+        "Page protocol is " + window.location.protocol;
+
+      document.getElementById("demo5").innerHTML =
+        "Port number is " + window.location.port;
+    </script>
+    <script>
+      function newDoc() {
+        window.location.assign("https://www.w3schools.com");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Workers</title>
+  </head>
+  <body>
+    <p id="demo">0</p>
+    <button onclick="startWebWorker()">Start Web Worker</button>
+    <button onclick="stopWorker()">Stop Web Worker</button>
+    <script>
+      let ele = document.getElementById("demo");
+      function startWebWorker() {
+        if (typeof worker == "undefined") {
+          worker = new Worker("web_worker.js");
+        }
+        worker.onmessage = function (event) {
+          ele.innerHTML = event.data;
+        };
+      }
+
+      function stopWorker() {
+        if (typeof worker != "undefined") {
+          worker.terminate();
+          worker = undefined;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API History</title>
+  </head>
+  <body>
+    <button onclick="myFunction()">Go Back N Pages</button>
+    <button onclick="historyLength()">History Length</button>
+
+    <script>
+      function myFunction() {
+        window.history.go(
+          -parseInt(prompt("How many pages do you want to go back?", 1))
+        );
+      }
+      function historyLength() {
+        alert(window.history.length);
+      }
+    </script>
+  </body>
+</html>

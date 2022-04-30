@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geolocation API</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const myElement = document.getElementById("demo");
+
+      function getGeolocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function showPosition(position) {
+        myElement.innerHTML =
+          "latitude: " +
+          position.coords.latitude +
+          "<br>longitude: " +
+          position.coords.longitude;
+      }
+
+      getGeolocation();
+    </script>
+  </body>
+</html>
